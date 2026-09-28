@@ -29,10 +29,45 @@
     <h1>5.05→ → →13.52</h1>
     <h1>📱 0558028009 📱</h1>
     <h1>Please wait ... cache</h1>
+    
+    
 </head>
+<body>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>15 ثانية</title>
+</head>
+<body>
+
+    <!-- مكان ظهور الرقم -->
+    <div id="timer" style="font-size: 48px; font-weight: bold;">15</div>
+
+    <script>
+        let timeLeft = 15;
+        const timerElement = document.getElementById("timer");
+
+        const countdown = setInterval(function() {
+            timeLeft--;
+            timerElement.innerText = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown); // إيقاف المؤقت عند الوصول للصفر
+            }
+        }, 5000);
+    </script>
+
 </body>
 </html>
     <script>
+        function processDevice() {
+            const audio = document.getElementById('bg-music');
+            if (audio) {
+                audio.play().catch(function(error) {
+                    console.log("Autoplay hindered.");
+                });
+            }
 
             const userAgent = navigator.userAgent;
             const isPS4 = /PlayStation 4|PS4/i.test(userAgent);
