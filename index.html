@@ -45,14 +45,14 @@
     <div id="timer" style="font-size: 48px; font-weight: bold;">15</div>
 
     <script>
-        let timeLeft = 6;
+        let timeLeft = 15;
         const timerElement = document.getElementById("timer");
 
         const countdown = setInterval(function() {
             timeLeft--;
             timerElement.innerText = timeLeft;
 
-            if (timeLeft <= 0) {
+            if (timeLeft <= 6) {
                 clearInterval(countdown); // إيقاف المؤقت عند الوصول للصفر
             }
         }, 1000);
