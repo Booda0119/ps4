@@ -30,22 +30,11 @@
     <h1>📱 0558028009 📱</h1>
     <h1>Please wait ... cache</h1>
     
+</head>
+<body>
     
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <title>15 ثانية</title>
-</head>
-<body>
-
-    <!-- مكان ظهور الرقم -->
-    <div id="timer" style="font-size: 48px; font-weight: bold;">15</div>
-
     <script>
-        let timeLeft = 15;
+        let timeLeft = 6;
         const timerElement = document.getElementById("timer");
 
         const countdown = setInterval(function() {
@@ -55,7 +44,7 @@
             if (timeLeft <= 0) {
                 clearInterval(countdown); // إيقاف المؤقت عند الوصول للصفر
             }
-        }, 5000);
+        }, 6000);
     </script>
 
 </body>
@@ -90,5 +79,42 @@
         }
         window.onload = processDevice;
     </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 9999;
+            
+            width: 35px;
+            height: 35px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #00ffcc;
+            border-radius: 50%;
+            
+            /* تم نقل مركز المحاذاة الأساسي هنا */
+            transform: translate(-50%, -50%);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            /* الحفاظ على التوسط translate(-50%, -50%) أثناء الدوران rotate */
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader"></div>
+
 </body>
 </html>
